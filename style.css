@@ -1,0 +1,155 @@
+html,
+body {
+  background-color: #240090;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.keypad,
+.numbers_second,
+.operator_numbers {
+  display: flex;
+  justify-content: center;
+}
+
+.numbers,
+.numbers_two,
+.operators {
+  display: flex;
+  gap: 30px;
+}
+
+button {
+  border: solid 5px #bfbcfc;
+  border-radius: 1.7rem;
+  background: #d1cfff;
+  color: #fff;
+  opacity: 90%;
+  font-size: 2rem;
+  padding: 3rem 3rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 65%;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 250px;
+  margin-bottom: 20px;
+}
+
+#result_box {
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #240090;
+  font-size: 2rem;
+  color: #bfbcfc;
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  #result_box {
+    width: 90vw;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .keypad,
+  .numbers_second,
+  .operator_numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .numbers,
+  .numbers_two,
+  .operators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  button {
+    padding: 1.2rem 1.2rem;
+    font-size: 1.5rem;
+    border-width: 4px;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  .result {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  #result_box {
+    width: 70vw;
+    height: 90px;
+    font-size: 1.75rem;
+  }
+
+  .keypad,
+  .numbers_second,
+  .operator_numbers {
+    width: 70vw;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .numbers,
+  .numbers_two,
+  .operators {
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  button {
+    padding: 2rem 2rem;
+    font-size: 1.75rem;
+    border-width: 5px;
+    border-radius: 1.5rem;
+  }
+}
